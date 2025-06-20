@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/eduardorivas09/microservicios-tutorial
+          default-label: config-server
+          search-paths: config-data
+server:
+  port: 8082
