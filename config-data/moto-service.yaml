@@ -1,2 +1,14 @@
 server:
-  port: 8003
+  port: 8003 # Puerto del microservicio moto
+eureka:
+  instance:
+    hostname: localhost # Dirección de host/IP de la instancia registrada
+  client:
+    fetch-registry: true # Consultar la lista de servicios de Eureka (también true por defecto)
+    register-with-eureka: true # Registrar este servicio en Eureka (por defecto es true)
+    service-url:
+      default-zone: http://localhost:8761/eureka # URL del servidor Eureka
+      
+  #eureka:
+  #  instance:
+  #    instance-id: ${spring.application.name}:${server.port} # ID único opcional para distinguir instancias      

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: eureka-service # Nombre con el que se registrará en Eureka
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8082 # Url del Config Server
+
+

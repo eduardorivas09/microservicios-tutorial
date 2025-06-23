@@ -1,12 +1,12 @@
 spring:
   application:
-    name: config-service
+    name: config-service # Identificacion del microservicio
   cloud:
     config:
       server:
         git:
           uri: https://github.com/eduardorivas09/microservicios-tutorial
-          default-label: config-server
+          default-label: eureka
           search-paths: config-data
 server:
   port: 8082
