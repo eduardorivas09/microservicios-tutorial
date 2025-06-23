@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/eduardorivas09/microservicios-tutorial
+          uri: file:///C:/Users/nerivas/Desktop/microservicios-tutorial
           default-label: eureka
           search-paths: config-data
 server:
