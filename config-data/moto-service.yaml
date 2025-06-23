@@ -4,11 +4,11 @@ eureka:
   instance:
     hostname: localhost # Dirección de host/IP de la instancia registrada
   client:
-    fetch-registry: true # Consultar la lista de servicios de Eureka (también true por defecto)
-    register-with-eureka: true # Registrar este servicio en Eureka (por defecto es true)
+    fetch-registry: true # Consultar la lista de servicios de eureka (tambien true por defecto)
+    register-with-eureka: true # Registrar este servicio en eureka (por defecto es true)
     service-url:
-      default-zone: http://localhost:8761/eureka # URL del servidor Eureka
+      default-zone: http://localhost:8761/eureka # URL del servidor eureka
       
   #eureka:
   #  instance:
-  #    instance-id: ${spring.application.name}:${server.port} # ID único opcional para distinguir instancias      
+  #    instance-id: ${spring.application.name}:${server.port} # ID unico opcional para distinguir instancias      

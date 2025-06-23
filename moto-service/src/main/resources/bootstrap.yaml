@@ -1,7 +1,7 @@
 spring:
   application:
-    name: moto-service # Nombre del servicio en Eureka
+    name: moto-service # Nombre del servicio en eureka
   cloud:
     config:
       enabled: true
-      uri: http://localhost:8082 # Url del Config Server
+      uri: http://localhost:8082 # Url del config server
