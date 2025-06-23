@@ -1,6 +1,6 @@
 server:
-  port: 8761 # Puerto del microservicio eureka service
+  port: 8761
 eureka:
   client:
-    fetch-registry: false # No registrar este servicio en eureka (por defecto es true)
-    register-with-eureka: false # No consultar la lista de servicios de eureka (tambien true por defecto)
+    fetch-registry: false
+    register-with-eureka: false

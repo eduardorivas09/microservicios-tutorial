@@ -1,7 +1,7 @@
 spring:
   application:
-    name: usuario-service # Nombre del servicio en eureka
+    name: usuario-service
   cloud:
     config:
       enabled: true
-      uri: http://localhost:8082 # Url del config server
+      uri: http://localhost:8082

@@ -1,14 +1,10 @@
 server:
-  port: 8001 # Puerto del microservicio usuario
+  port: 8001
 eureka:
   instance:
-    hostname: localhost # Direccion de host/IP de la instancia registrada
+    hostname: localhost
   client:
-    fetch-registry: true # Consultar la lista de servicios de eureka (tambien true por defecto)
-    register-with-eureka: true # Registrar este servicio en eureka (por defecto es true)
+    fetch-registry: true
+    register-with-eureka: true
     service-url:
-      default-zone: http://localhost:8761/eureka # URL del servidor eureka
-
-  #eureka:
-  #  instance:
-  #    instance-id: ${spring.application.name}:${server.port} # ID unico opcional para distinguir instancias
+      default-zone: http://localhost:8761/eureka
