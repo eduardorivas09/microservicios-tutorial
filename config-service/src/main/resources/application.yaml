@@ -6,7 +6,7 @@ spring:
       server:
         git:
           uri: file:///C:/Users/nerivas/Desktop/microservicios-tutorial
-          default-label: multiple-instancias
+          default-label: gateway
           search-paths: config-data
 server:
   port: 8082
