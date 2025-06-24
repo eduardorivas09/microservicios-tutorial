@@ -11,19 +11,21 @@ eureka:
 spring:
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-        router:
-          - id: usuario-service
-            uri: lb://usuario-service
-            predicates:
-              - Path=/usuario/**
-          - id: carro-service
-            uri: lb://carro-service
-            predicates:
-              - Path=/carro/**
-          - id: moto-service
-            uri: lb://moto-service
-            predicates:
-              - Path=/moto/**
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+          routes:
+            - id: usuario-service
+              uri: lb://usuario-service
+              predicates:
+                - Path=/usuario/**
+            - id: carro-service
+              uri: lb://carro-service
+              predicates:
+                - Path=/carro/**
+            - id: moto-service
+              uri: lb://moto-service
+              predicates:
+                - Path=/moto/**
