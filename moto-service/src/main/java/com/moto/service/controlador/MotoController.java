@@ -17,7 +17,7 @@ public class MotoController {
     @Autowired
     private MotoService motoService;
 
-    @GetMapping
+    @GetMapping()
     public ResponseEntity<List<Moto>> listarMotos() {
         List<Moto> motos = motoService.getAll();
         if (motos.isEmpty())
@@ -35,7 +35,7 @@ public class MotoController {
             return ResponseEntity.ok(moto);
     }
 
-    @PostMapping
+    @PostMapping()
     public ResponseEntity<Moto> guardarMoto(@Validated @RequestBody Moto moto) {
         Moto motoSave = motoService.save(moto);
         return ResponseEntity.ok(motoSave);

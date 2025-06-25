@@ -12,7 +12,7 @@ import java.util.List;
 @FeignClient(name = "moto-service")
 public interface MotoFeignClient {
 
-    @PostMapping()
+    @PostMapping("/moto")
     public Moto guardarMoto(@RequestBody Moto moto);
 
     @GetMapping("/moto/usuario/{usuarioId}")

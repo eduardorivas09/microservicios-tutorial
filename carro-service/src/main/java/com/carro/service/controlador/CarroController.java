@@ -17,7 +17,7 @@ public class CarroController {
     @Autowired
     private CarroService carroService;
 
-    @GetMapping
+    @GetMapping()
     public ResponseEntity<List<Carro>> listarCarros() {
         List<Carro> carros = carroService.getAll();
         if (carros.isEmpty())
@@ -35,7 +35,7 @@ public class CarroController {
             return ResponseEntity.ok(carro);
     }
 
-    @PostMapping
+    @PostMapping()
     public ResponseEntity<Carro> guardarCarro(@Validated @RequestBody Carro carro) {
         Carro carroSave = carroService.save(carro);
         return ResponseEntity.ok(carroSave);
