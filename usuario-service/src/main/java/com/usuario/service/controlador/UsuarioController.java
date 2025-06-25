@@ -100,7 +100,7 @@ public class UsuarioController {
         return new ResponseEntity("El usuario: " + id + " tiene las motos en el taller.", HttpStatus.OK);
     }
 
-    private ResponseEntity<Moto> fallBackSaveMoto(@PathVariable("usuarioId") Integer id, @Validated @RequestBody Carro carro, RuntimeException exception) {
+    private ResponseEntity<Moto> fallBackSaveMoto(@PathVariable("usuarioId") Integer id, @Validated @RequestBody Moto moto, RuntimeException exception) {
         return new ResponseEntity("El usuario: " + id + " no tiene dinero para las motos.", HttpStatus.OK);
     }
 
