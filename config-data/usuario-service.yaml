@@ -39,4 +39,16 @@ resilience4j.circuitbreaker:
       eventConsumerBufferSize: 10
 spring:
   zipkin:
-    base-url: http://localhost:9411
+    base-url: http://localhost:9411  # URL donde corre Zipkin
+    enabled: true
+    sender:
+      type: WEB  # usa HTTP para enviar las trazas
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0  # 100% de las solicitudes serán trazadas (útil en desarrollo)
+  endpoints:
+    web:
+      exposure:
+        include: "*"
